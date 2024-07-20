@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "i-polevaya-hw-4"
+version = "0.1.0"
+description = "Project for online shop"
+authors = ["Irina Polevaya <mirwen@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.1"
+pytest-cov = "^5.0.0"
+
+
+[tool.poetry.group.lint.dependencies]
+black = "^24.4.2"
+isort = "^5.13.2"
+flake8 = "^7.1.0"
+mypy = "^1.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool_black]
+line-length = 119
+exclude = """
+(
+  /(
+    | .git          # в корне проекта
+    | .hg
+    | .mypy_cache
+    | .tox
+    | .venv
+    | dist
+  )/
+  | foo.py           # Также отдельно исключить файл с именем foo.py
+                     # в корне проекта
+)
+"""
+
+[tool_isort]
+line-length = 119
+
+[tool.mypy]
+disallow_untyped_defs = true
+no_implicit_optional = true
+warn_return_any = true
+exclude = 'venv'
