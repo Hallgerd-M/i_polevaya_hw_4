@@ -1,6 +1,7 @@
 import pytest
-from src.product import Product
+
 from src.category import Category
+from src.product import Product
 
 
 @pytest.fixture
@@ -9,7 +10,7 @@ def first_product():
         name="Product",
         description="Description of the product",
         price=84.50,
-        quantity=10
+        quantity=10,
     )
 
 
@@ -19,8 +20,9 @@ def second_product():
         name="Product number two",
         description="Description of the product number two",
         price=155.87,
-        quantity=34
+        quantity=34,
     )
+
 
 @pytest.fixture
 def first_category():
@@ -28,10 +30,21 @@ def first_category():
         name="Category",
         description="Description of the category",
         products=[
-            Product(name="Product", description="Description of the product", price=84.50, quantity=10),
-            Product(name="Product number two", description="Description of the product number two", price=155.87, quantity=34),
-        ]
+            Product(
+                name="Product",
+                description="Description of the product",
+                price=84.50,
+                quantity=10,
+            ),
+            Product(
+                name="Product number two",
+                description="Description of the product number two",
+                price=155.87,
+                quantity=34,
+            ),
+        ],
     )
+
 
 @pytest.fixture
 def second_category():
@@ -39,9 +52,23 @@ def second_category():
         name="Category number two",
         description="Description of the category number two",
         products=[
-            Product(name="Product", description="Description of the product", price=84.50, quantity=10),
-            Product(name="Product number two", description="Description of the product number two", price=155.87,
-                    quantity=34),
-            Product(name="Product three", description="Description of the product three", price=8467.56, quantity=32),
-        ]
+            Product(
+                name="Product",
+                description="Description of the product",
+                price=84.50,
+                quantity=10,
+            ),
+            Product(
+                name="Product number two",
+                description="Description of the product number two",
+                price=155.87,
+                quantity=34,
+            ),
+            Product(
+                name="Product three",
+                description="Description of the product three",
+                price=8467.56,
+                quantity=32,
+            ),
+        ],
     )
