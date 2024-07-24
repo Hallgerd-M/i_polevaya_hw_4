@@ -8,3 +8,7 @@ def test_category(first_category, second_category):
 
     assert first_category.product_count == 5
     assert second_category.product_count == 5
+
+
+def test_cat_get_product_list_property(first_category):
+    print(first_category.products)

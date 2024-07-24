@@ -22,10 +22,10 @@ class Product:
         return cls(name, description, price, quantity)
 
     @property
-    def get_price(self):
+    def price(self):
         return self.__price
 
-    @get_price.setter
-    def get_price(self):
+    @price.setter
+    def price(self, value):
         if self.__price <= 0:
             print("Цена не должна быть нулевая или орицательная")
