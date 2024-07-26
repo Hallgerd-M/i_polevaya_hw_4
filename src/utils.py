@@ -26,8 +26,8 @@ def create_object_from_json(data: dict) -> Any:
             products.append(Product(**product))
             name = category["name"]
             description = category["description"]
-            price = category["price"]
-            quantity = category["quantity"]
+            # price = category["price"]
+            # quantity = category["quantity"]
             category_instance = Category(name, description, products)
             categories.append(category_instance)
         return categories
