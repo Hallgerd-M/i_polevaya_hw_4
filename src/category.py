@@ -1,9 +1,10 @@
 from typing import Any
 
+from src.base import Base
 from src.product import Product
 
 
-class Category:
+class Category(Base):
     """Категория товара"""
 
     category_count = 0
